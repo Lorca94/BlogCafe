@@ -1,0 +1,275 @@
+:root {
+    --fontHeading: 'PT Sans', sans-serif;
+    --fontPar: 'Open Sans', sans-serif;
+
+    --primary-color: #784d3c;
+    --white: #FFFFFF;
+    --black: #000000;
+    --gray: #e1e1e1;
+}
+
+html{
+    box-sizing: border-box;
+
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: var(--fontPar);
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+/**Globales**/
+.container{
+    max-width: 120rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2 ,h3 ,h4 {
+    font-family: var(--fontHeading);
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 4.8rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+h4 {
+    font-size: 2.8rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/**Utilidades**/
+.no-margin{
+    margin:0;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+.center-text{
+    text-align: center;
+}
+
+.header{
+    background-image: url(../img//banner.jpg);
+    height: 60rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.header__text {
+    text-align: center;
+    color: var(--white);
+    margin-top: 5rem;
+}
+
+@media (min-width: 768px) {
+    .header__text {
+        margin-top: 5rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem
+    }
+}
+
+.logo {
+    color: var(--white);
+}
+
+.logo__name{
+    font-weight: normal;
+}
+
+.logo__bold{
+    font-weight: 700;
+}
+@media (min-width:780px) {
+    .navigator {
+        display: flex;
+        gap: 2rem;
+    }
+}
+
+.navigator__link {
+    display: block;
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+@media (min-width:780px){
+    .principal-content{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: 4rem;
+    }
+}
+
+.entrada {
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 2rem;
+}
+
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+
+.btn {
+    display: block;
+    font-family: var(--fontHeading);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+@media (min-width: 768px){
+    .btn {
+        display: inline-block;
+    }
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: var(--black);
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+}
+
+.courses {
+    list-style: none;
+}
+
+.widget-course {
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 2rem;
+}
+.widget-course:last-of-type{
+    border: none;
+    margin-bottom: none;
+}
+
+.widget-course__label,
+.course__label{
+    font-family: var(--fontHeading);
+    font-weight: 700;
+}
+
+.widget-course__info,
+.course__info{
+    font-weight: 200;
+}
+
+.widget-course__label,
+.widget-course__info{
+    font-size: 2rem;
+}
+
+.footer {
+    background-color: var(--black);
+    padding: 3rem;
+}
+
+@media(min-width: 768px) {
+    .sobre-nosotros {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .sobre-nosotros__img,
+    .sobre-nosotros__text {
+        flex-basis: 50%;
+    }
+}
+
+.course{
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gray);
+}
+
+@media (min-width: 768px) {
+    .course {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+
+.course:last-of-type{
+    border:none;
+}
+
+.contact-bg {
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form{
+    background-color: var(--white);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.field{
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.field__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.field__name {
+    flex: 1;
+    border: 1px solid var(--gray);
+}
+.field__message {
+    flex: 1;
+    border: 1px solid var(--gray);
+
+}
